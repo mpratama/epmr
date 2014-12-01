@@ -2,7 +2,7 @@
 {% block title %}Detail Pasien{% endblock %}
 {% block stylesheet %}/slim/web/css/bijou.min.css{% endblock %}
 {% block content %}
-
-	<b>{{ data.nama }}<b>
-
+	{% for pasien in data2 %}
+	<b>{{ pasien.nama }}<b>
+	{% endfor %}
 {% endblock %}
