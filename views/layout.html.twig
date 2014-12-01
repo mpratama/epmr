@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>{% block title %}{% endblock %} - Patient Medication Record</title>
+    <link rel="stylesheet" href="{% block stylesheet %}{% endblock %}">
+    <style type='text/css'>
+      body{
+        margin-top:60px;
+      }
+      .light{
+        background:#CCC;'
+        color:#333;
+      }
+      .dark{
+        background:#333;
+        color:#CCC;
+      }
+      .grid{
+        text-align:center;
+        font-size:10px;
+      }
+      .banner{
+        text-align:center;
+        padding:10px 0;
+      }
+      .table{
+        margin-bottom:35px;
+      }
+      .banner button{
+        margin-top:7px;
+      }
+      .divider{
+        width:100%;
+        background:#CCC;
+        height:1px;
+        margin:25px 0;
+      }
+      .explainer{
+        font-weight:200;
+        color:#AAA;
+        margin-bottom:10px;
+      }
+      button{
+      	margin-bottom:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='navbar fixed'>
+      <div class='container'>
+        <h4 class='pull-left'><a href='index.php'>Patient Medication Record</a></h4>
+        <ul class='pull-right'>
+          <li><a href='#'>Tambah Pasien</a></li>
+          <li><small>Ctrl+F untuk mencari</small></a></li>
+        </ul>
+      </div>
+    </div>
+    {% block content %}{% endblock %}
+  </body>
+</html>

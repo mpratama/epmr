@@ -1,0 +1,24 @@
+{% extends "layout.html.twig" %}
+{% block title %}Index Pasien{% endblock %}
+{% block stylesheet %}css/bijou.min.css{% endblock %}
+{% block content %}
+    <div class='container'>      
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Nomor Telepon</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        {% for pasien in data %}<tbody>
+          <td><a href="lihat/pasien/{{ pasien.idpasien|e }}">{{ pasien.nama|e }}</a></td>
+          <td>{{ pasien.alamat|e }}</td>
+          <td>{{ pasien.telepon|e }}</td>
+          <td></td>
+        </tbody>{% endfor %}
+      </table>
+      
+    </div>
+{% endblock %}
