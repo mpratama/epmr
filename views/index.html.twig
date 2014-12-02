@@ -1,29 +1,32 @@
 {% extends "layout.html.twig" %}
 {% block title %}Index Pasien{% endblock %}
-{% block stylesheet %}css/bijou.min.css{% endblock %}
+{% block stylesheet1 %}css/bijou.min.css{% endblock %}
+{% block stylesheet2 %}css/font-awesome.min.css{% endblock %}
 {% block pullright %}
-<li><a href='#'>Tambah Pasien</a></li>
-<li><small>Ctrl+F untuk mencari</small></a></li>
-<li><a href='dokter'>Manage Dokter</a></li>
+<li><i class="fa fa-plus"></i> <a href='#'>Tambah Pasien</a></li>
+<li><small><i class="fa fa-search"></i> Ctrl+F</small></a></li>
+<li><i class="fa fa-user-md"></i> <a href='dokter'>Manage Dokter</a></li>
 {% endblock %}
 {% block content %}
+{% spaceless %}
     <div class='container'>      
       <table class='table table-striped'>
         <thead>
           <tr>
-            <th>Nama</th>
-            <th>Alamat</th>
-            <th>Nomor Telepon</th>
-            <th>Action</th>
+            <th><i class="fa fa-wheelchair"></i> Nama Pasien</th>
+            <th><i class="fa fa-home"></i> Alamat</th>
+            <th><i class="fa fa-phone"></i> Nomor Telepon</th>
+            <th><i class="fa fa-cog fa-spin"></i> Action</th>
           </tr>
         </thead>
         {% for pasien in data %}<tbody>
           <td><a href="pasien/{{ pasien.idpasien|e }}">{{ pasien.nama|e }}</a></td>
           <td>{{ pasien.alamat|e }}</td>
           <td>{{ pasien.telepon|e }}</td>
-          <td><a href="hapus/{{ pasien.idpasien|e }}" onclick="return confirm('Hapus data pasien ini?')">Hapus</a> | <a href="#">PDF</a></td>
+          <td><a href="hapus/{{ pasien.idpasien|e }}" onclick="return confirm('Hapus data pasien ini?')"><i class="fa fa-trash"></i></a> | <a href="#"><i class="fa fa-file-pdf-o"></i></a></td>
         </tbody>{% endfor %}
       </table>
       
     </div>
+{% endspaceless %}
 {% endblock %}

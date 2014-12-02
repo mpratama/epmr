@@ -6,12 +6,13 @@
 <li><a href="#">Tambah Kunjungan</a></li>
 {% endblock %}
 {% block content %}
+{% spaceless %}
 <div class='container'>
 	<div class='row'>
           <div class='span eight light'>
           <form action="update_pasien.php" method="post">
 		<fieldset>
-		<legend><h5>Data Pasien</h5></legend>
+		<legend>Data Pasien</legend>
 		{% for pasien in data2 %}
 		<label for="name">Nama Pasien</label><br>
 		<input type="text" name="nama" value="{{ pasien.nama|e }}" /><br>
@@ -36,4 +37,5 @@
         </div>
 	
 </div>
+{% endspaceless %}
 {% endblock %}

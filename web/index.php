@@ -10,7 +10,7 @@ $app = new \Slim\Slim(array(
 
 $app->get('/', function () use ($app) {
     include '/../controller/index.php';
-});
+})->name('index');
 
 $app->get('/pasien/:idpasien', function ($idpasien) use ($app) {
     include '/../controller/select.php';
