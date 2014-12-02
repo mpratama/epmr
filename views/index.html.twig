@@ -16,7 +16,7 @@
             <th><i class="fa fa-wheelchair"></i> Nama Pasien</th>
             <th><i class="fa fa-home"></i> Alamat</th>
             <th><i class="fa fa-phone"></i> Nomor Telepon</th>
-            <th><i class="fa fa-cog fa-spin"></i> Action</th>
+            <th><i class="fa fa-cogs"></i> Action</th>
           </tr>
         </thead>
         {% for pasien in data %}<tbody>
@@ -26,7 +26,8 @@
           <td><a href="hapus/{{ pasien.idpasien|e }}" onclick="return confirm('Hapus data pasien ini?')"><i class="fa fa-trash"></i></a> | <a href="#"><i class="fa fa-file-pdf-o"></i></a></td>
         </tbody>{% endfor %}
       </table>
-      
+      <hr>
+      <p class='pull-right'><a href='https://github.com/mpratama/epmr' target='_blank'><i class="fa fa-github-square fa-2x"></i></a></p>
     </div>
 {% endspaceless %}
 {% endblock %}
