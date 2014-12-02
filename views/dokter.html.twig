@@ -1,0 +1,7 @@
+<form method="post">
+        <select name="dokter">
+        		{% for dokter in data %}
+                <option value="{{ dokter.nama|e }}">{{ dokter.nama|e }}</option>
+                {% endfor %}
+        </select>
+</form>

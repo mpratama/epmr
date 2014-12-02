@@ -1,6 +1,11 @@
 {% extends "layout.html.twig" %}
 {% block title %}Index Pasien{% endblock %}
 {% block stylesheet %}css/bijou.min.css{% endblock %}
+{% block pullright %}
+<li><a href='#'>Tambah Pasien</a></li>
+<li><small>Ctrl+F untuk mencari</small></a></li>
+<li><a href='dokter'>Manage Dokter</a></li>
+{% endblock %}
 {% block content %}
     <div class='container'>      
       <table class='table table-striped'>
@@ -13,10 +18,10 @@
           </tr>
         </thead>
         {% for pasien in data %}<tbody>
-          <td><a href="lihat/pasien/{{ pasien.idpasien|e }}">{{ pasien.nama|e }}</a></td>
+          <td><a href="pasien/{{ pasien.idpasien|e }}">{{ pasien.nama|e }}</a></td>
           <td>{{ pasien.alamat|e }}</td>
           <td>{{ pasien.telepon|e }}</td>
-          <td></td>
+          <td><a href="hapus/{{ pasien.idpasien|e }}" onclick="return confirm('Hapus data pasien ini?')">Hapus</a> | <a href="#">PDF</a></td>
         </tbody>{% endfor %}
       </table>
       

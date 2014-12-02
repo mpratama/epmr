@@ -48,11 +48,9 @@
   <body>
     <div class='navbar fixed'>
       <div class='container'>
-        <h4 class='pull-left'><a href='index.php'>Patient Medication Record</a></h4>
+        <h4 class='pull-left'><a href='{% block indexlink %}{% endblock %}'>Patient Medication Record</a></h4>
         <ul class='pull-right'>
-          <li><a href='#'>Tambah Pasien</a></li>
-          <li><small>Ctrl+F untuk mencari</small></a></li>
-        </ul>
+          {% block pullright %}{% endblock %}</ul>
       </div>
     </div>
     {% block content %}{% endblock %}

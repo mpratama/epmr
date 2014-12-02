@@ -6,7 +6,9 @@ $detail_pasien = $database->select("pasien", [
 	"nama",
 	"alamat",
 	"telepon",
-	"usia"
+	"usia",
+	"alergi",
+	"penyakit_lain"
 ],[
 	"idpasien" => $idpasien
 ]);

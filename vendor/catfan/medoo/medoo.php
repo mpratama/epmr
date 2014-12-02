@@ -14,9 +14,9 @@ class medoo
 	// For MySQL, MariaDB, MSSQL, Sybase, PostgreSQL, Oracle
 	protected $server = 'localhost';
 
-	protected $username = 'pmr';
+	protected $username = 'epmr';
 
-	protected $password = 'pmr1234';
+	protected $password = 'epmr1234';
 
 	// For SQLite
 	protected $database_file = '';
@@ -26,7 +26,7 @@ class medoo
 
 	protected $charset = 'utf8';
 
-	protected $database_name = 'pmr';
+	protected $database_name = 'epmr';
 
 	protected $option = array();
 

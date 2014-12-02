@@ -1,8 +1,39 @@
 {% extends "layout.html.twig" %}
 {% block title %}Detail Pasien{% endblock %}
-{% block stylesheet %}/slim/web/css/bijou.min.css{% endblock %}
+{% block stylesheet %}/epmr/web/css/bijou.min.css{% endblock %}
+{% block indexlink %}/epmr/web{% endblock %}
+{% block pullright %}
+<li><a href="#">Tambah Kunjungan</a></li>
+{% endblock %}
 {% block content %}
-	{% for pasien in data2 %}
-	<b>{{ pasien.nama }}<b>
-	{% endfor %}
+<div class='container'>
+	<div class='row'>
+          <div class='span eight light'>
+          <form action="update_pasien.php" method="post">
+		<fieldset>
+		<legend><h5>Data Pasien</h5></legend>
+		{% for pasien in data2 %}
+		<label for="name">Nama Pasien</label><br>
+		<input type="text" name="nama" value="{{ pasien.nama|e }}" /><br>
+		<label for="name">Alamat</label><br>
+		<input type="text" name="alamat" value="{{ pasien.alamat|e }}" /><br>
+		<label for="name">No. Telepon</label><br>
+		<input type="text" name="telepon" value="{{ pasien.telepon|e }}" /><br>
+		<label for="name">Usia</label><br>
+		<input type="text" name="usia" value="{{ pasien.usia|e }}" /><br>
+		<label for="name">Alergi</label><br>
+		<input type="text" name="alergi" value="{{ pasien.alergi|e }}" /><br>
+		<label for="name">Penyakit Lain</label><br>
+		<input type="text" name="penyakit_lain" value="{{ pasien.penyakit_lain|e }}" />
+		<input type="hidden" name="idpasien" value="{{ pasien.idpasien|e }}" />
+		<input type="submit" class="button primary" value="Ubah Data Pasien" />
+		{% endfor %}
+		</fieldset>
+		</form>
+		</div>
+		<div class='span four dark'>
+			<p>Tanggal Kunjungan:</p></div>
+        </div>
+	
+</div>
 {% endblock %}
