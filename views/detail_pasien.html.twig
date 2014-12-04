@@ -14,7 +14,7 @@
           {% for pasien in data2 %}
           <form action="{{ pasien.idpasien }}/edit" method="post">
 		<fieldset>
-		<legend><b>Data Pasien</b></legend>
+		<legend><b>Data Pasien <i class="fa fa-wheelchair"></i></b></legend>
 		<label for="name"><b>Nama Pasien</b></label><br>
 		<input type="text" name="nama" value="{{ pasien.nama|e }}" /><br>
 		<label for="name"><b>Alamat</b></label><br>
@@ -36,7 +36,7 @@
 		<textarea rows="4" cols="50" name="penyakit_lain">{{ pasien.penyakit_lain|e }}</textarea>
 		{% endfor %}
 		</fieldset>
-		<br><input type="submit" class="button primary small grid" value="Ubah Data "/>
+		<br><input type="submit" class="button primary small grid" value="Ubah Data " />
           </form></div>
 		<div class='span four dark'>
 		<fieldset>

@@ -20,7 +20,7 @@
           </tr>
         </thead>
         {% for pasien in data %}<tbody>
-          <td><a href="pasien/{{ pasien.idpasien|e }}">{{ pasien.nama|e }}</a></td>
+          <td><a href="pasien/{{ pasien.idpasien|e }}">{{ pasien.nama|upper|e }}</a></td>
           <td>{{ pasien.alamat|e }}</td>
           <td>{{ pasien.telepon|e }}</td>
           <td><a href="hapus/{{ pasien.idpasien|e }}" onclick="return confirm('Hapus data pasien ini?')"><i class="fa fa-trash"></i></a> | <a href="#"><i class="fa fa-file-pdf-o"></i></a></td>
