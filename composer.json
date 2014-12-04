@@ -3,7 +3,6 @@
         "slim/slim": "dev-master",
         "catfan/medoo": "dev-master",
         "slim/views": "0.1.*",
-        "twig/twig": "1.16.*@dev",
-        "vrana/adminer": "dev-master"
+        "twig/twig": "1.16.*@dev"
     }
 }

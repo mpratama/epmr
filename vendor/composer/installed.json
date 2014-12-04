@@ -1,59 +1,5 @@
 [
     {
-        "name": "catfan/medoo",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/catfan/Medoo.git",
-            "reference": "e489311409b18b06614d52a225d785419562de5d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/catfan/Medoo/zipball/e489311409b18b06614d52a225d785419562de5d",
-            "reference": "e489311409b18b06614d52a225d785419562de5d",
-            "shasum": ""
-        },
-        "require": {
-            "ext-pdo": "*",
-            "php": ">=5.1"
-        },
-        "suggest": {
-            "ext-pdo-mysql": "For MySQL or MariaDB databases",
-            "ext-pdo-pqsql": "For PostgreSQL databases",
-            "ext-pdo-sqlite": "For SQLite databases",
-            "ext-pdo_dblib": "For MSSQL databases on Liunx/UNIX platform",
-            "ext-pdo_sqlsrv": "For MSSQL databases on Windows platform"
-        },
-        "time": "2014-08-15 12:29:42",
-        "type": "framework",
-        "installation-source": "dist",
-        "autoload": {
-            "files": [
-                "medoo.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Angel Lai",
-                "email": "angel.lai.cat@gmail.com"
-            }
-        ],
-        "description": "The Lightest PHP database framework to accelerate development",
-        "homepage": "http://medoo.in",
-        "keywords": [
-            "database",
-            "mssql",
-            "mysql",
-            "sql",
-            "sqlite"
-        ]
-    },
-    {
         "name": "slim/slim",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -217,43 +163,60 @@
         ]
     },
     {
-        "name": "vrana/adminer",
+        "name": "catfan/medoo",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/vrana/adminer.git",
-            "reference": "406889d7c3ac472bfd7696b85c67c087b0cfde13"
+            "url": "https://github.com/catfan/Medoo.git",
+            "reference": "019e4f60aa756adae12643c3c6a851dd9c468c08"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/vrana/adminer/zipball/406889d7c3ac472bfd7696b85c67c087b0cfde13",
-            "reference": "406889d7c3ac472bfd7696b85c67c087b0cfde13",
+            "url": "https://api.github.com/repos/catfan/Medoo/zipball/019e4f60aa756adae12643c3c6a851dd9c468c08",
+            "reference": "019e4f60aa756adae12643c3c6a851dd9c468c08",
             "shasum": ""
         },
-        "time": "2014-12-02 17:17:48",
-        "type": "library",
+        "require": {
+            "ext-pdo": "*",
+            "php": ">=5.1"
+        },
+        "suggest": {
+            "ext-pdo-mysql": "For MySQL or MariaDB databases",
+            "ext-pdo-pqsql": "For PostgreSQL databases",
+            "ext-pdo-sqlite": "For SQLite databases",
+            "ext-pdo_dblib": "For MSSQL or Sybase databases on Liunx/UNIX platform",
+            "ext-pdo_oci": "For Oracle databases",
+            "ext-pdo_sqlsrv": "For MSSQL databases on Windows platform"
+        },
+        "time": "2014-12-04 07:52:42",
+        "type": "framework",
         "installation-source": "dist",
         "autoload": {
-            "classmap": [
-                "plugins/"
+            "files": [
+                "medoo.php"
             ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "Apache-2.0",
-            "GPL-2.0"
+            "MIT"
         ],
         "authors": [
             {
-                "name": "Jakub Vrána",
-                "homepage": "http://www.vrana.cz/"
+                "name": "Angel Lai",
+                "email": "angel.lai.cat@gmail.com"
             }
         ],
-        "description": "Database management in a single PHP file.",
-        "homepage": "http://www.adminer.org/",
+        "description": "The Lightest PHP database framework to accelerate development",
+        "homepage": "http://medoo.in",
         "keywords": [
-            "database"
+            "database",
+            "lightweight",
+            "mssql",
+            "mysql",
+            "php framework",
+            "sql",
+            "sqlite"
         ]
     }
 ]
