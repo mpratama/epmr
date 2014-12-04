@@ -16,6 +16,10 @@ $app->get('/pasien/:idpasien', function ($idpasien) use ($app) {
     include '/../controller/select.php';
 });
 
+$app->get('/pasien/:idpasien/edit/', function () use ($app) {
+    return 'asdasda';
+});
+
 $app->get('/hapus/:idpasien', function ($idpasien) use ($app) {
     include '/../controller/hapus.php';
 });

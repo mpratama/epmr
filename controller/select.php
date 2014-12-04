@@ -13,6 +13,14 @@ $detail_pasien = $database->select("pasien", [
 	"idpasien" => $idpasien
 ]);
 
+$lihat_kunjungan = $database->select("kunjungan", [
+	"id",
+	"tanggal"],[
+	"idpas" => $idpasien,
+	"ORDER" => "id ASC"
+	]);
+
 $app->render('detail_pasien.html.twig', array(
-	'data2' => $detail_pasien
+	'data2' => $detail_pasien,
+	'data3' => $lihat_kunjungan
 	));

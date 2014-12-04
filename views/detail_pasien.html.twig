@@ -10,18 +10,16 @@
 <div class='container'>
 	<div class='row light'>
           <div class='span two'>
-          <form action="edit" method="post">
+          {% for pasien in data2 %}
+          <form action="{{ pasien.idpasien }}/edit" method="post">
 		<fieldset>
 		<legend><b>Data Pasien</b></legend>
-		{% for pasien in data2 %}
 		<label for="name"><b>Nama Pasien</b></label><br>
 		<input type="text" name="nama" value="{{ pasien.nama|e }}" /><br>
 		<label for="name"><b>Alamat</b></label><br>
 		<input type="text" name="alamat" value="{{ pasien.alamat|e }}" /><br>
 		<label for="name"><b>No. Telepon</b></label><br>
-		<input type="text" name="telepon" value="{{ pasien.telepon|e }}" /><br>
-		<label for="name"><b>Usia</b></label><br>
-		<input type="text" name="usia" value="{{ pasien.usia|e }}" /><br>
+		<input type="text" name="telepon" value="{{ pasien.telepon|e }}" /><br>		
 		<input type="hidden" name="idpasien" value="{{ pasien.idpasien|e }}" />
 		</fieldset>
 		<br><input type="submit" class="button primary small" value="Ubah Data Pasien" />
@@ -29,6 +27,8 @@
           <div class='span five'>
           <fieldset>
 		<legend><b>Data Pendukung</b></legend>
+		<label for="name"><b>Usia</b></label><br>
+		<input type="text" name="usia" value="{{ pasien.usia|e }}" /><br>
 		<label for="name"><b>Alergi</b></label><br>
 		<textarea rows="4" cols="50" name="alergi">{{ pasien.alergi|e }}</textarea><br>
 		<label for="name"><b>Penyakit Lain</b></label><br>
@@ -37,7 +37,12 @@
 		</fieldset>
           </form></div>
 		<div class='span four dark'>
-			<p>Tanggal Kunjungan:</p></div>
+		<fieldset>
+		<legend><b>Tanggal Kunjungan :</b></legend>
+			{% for kunjungan in data3 %}
+			<li><a href='#'>{{ kunjungan.tanggal|e }}</a></li>
+			{% endfor %}
+			</fieldset>
         </div>
 	
 </div>
