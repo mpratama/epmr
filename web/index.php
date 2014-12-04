@@ -14,10 +14,10 @@ $app->get('/', function () use ($app) {
 
 $app->get('/pasien/:idpasien', function ($idpasien) use ($app) {
     include '/../controller/select.php';
-});
+})->name('pasien');
 
-$app->get('/pasien/:idpasien/edit/', function () use ($app) {
-    return 'asdasda';
+$app->post('/pasien/:idpasien/edit', function ($idpasien) use ($app) {
+    include '/../controller/update.php';
 });
 
 $app->get('/hapus/:idpasien', function ($idpasien) use ($app) {

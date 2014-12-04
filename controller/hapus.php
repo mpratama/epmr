@@ -7,4 +7,4 @@ $hapus_pasien = $database->delete("pasien", [
 		]
 	]
 );
-$app->redirect('/epmr/web');
+$app->response->redirect($app->urlFor('index'));

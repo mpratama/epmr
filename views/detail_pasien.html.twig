@@ -1,9 +1,10 @@
 {% extends "layout.html.twig" %}
 {% block title %}Detail Pasien{% endblock %}
 {% block stylesheet1 %}/epmr/web/css/bijou.min.css{% endblock %}
+{% block stylesheet2 %}/epmr/web/css/font-awesome.min.css{% endblock %}
 {% block indexlink %}/epmr/web{% endblock %}
 {% block pullright %}
-<li><a href="#">Tambah Kunjungan</a></li>
+<li><i class="fa fa-plus-circle"></i> <a href="#">Tambah Kunjungan</a></li>
 {% endblock %}
 {% block content %}
 {% spaceless %}
@@ -17,12 +18,12 @@
 		<label for="name"><b>Nama Pasien</b></label><br>
 		<input type="text" name="nama" value="{{ pasien.nama|e }}" /><br>
 		<label for="name"><b>Alamat</b></label><br>
-		<input type="text" name="alamat" value="{{ pasien.alamat|e }}" /><br>
+		<input type="text" size='25' name="alamat" value="{{ pasien.alamat|e }}" /><br>
 		<label for="name"><b>No. Telepon</b></label><br>
 		<input type="text" name="telepon" value="{{ pasien.telepon|e }}" /><br>		
 		<input type="hidden" name="idpasien" value="{{ pasien.idpasien|e }}" />
 		</fieldset>
-		<br><input type="submit" class="button primary small" value="Ubah Data Pasien" />
+		
 		</div>
           <div class='span five'>
           <fieldset>
@@ -35,6 +36,7 @@
 		<textarea rows="4" cols="50" name="penyakit_lain">{{ pasien.penyakit_lain|e }}</textarea>
 		{% endfor %}
 		</fieldset>
+		<br><input type="submit" class="button primary small grid" value="Ubah Data "/>
           </form></div>
 		<div class='span four dark'>
 		<fieldset>
