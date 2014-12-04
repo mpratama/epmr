@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0ccbb38225117544497c7eee68bf16c8",
+    "hash": "380ed78c40e2e2e82de067c475cd76fe",
     "packages": [
         {
             "name": "catfan/medoo",
@@ -214,6 +214,44 @@
                 "templating"
             ],
             "time": "2014-11-20 10:35:14"
+        },
+        {
+            "name": "vrana/adminer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vrana/adminer.git",
+                "reference": "406889d7c3ac472bfd7696b85c67c087b0cfde13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vrana/adminer/zipball/406889d7c3ac472bfd7696b85c67c087b0cfde13",
+                "reference": "406889d7c3ac472bfd7696b85c67c087b0cfde13",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "plugins/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0",
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jakub Vrána",
+                    "homepage": "http://www.vrana.cz/"
+                }
+            ],
+            "description": "Database management in a single PHP file.",
+            "homepage": "http://www.adminer.org/",
+            "keywords": [
+                "database"
+            ],
+            "time": "2014-12-02 17:17:48"
         }
     ],
     "packages-dev": [],
@@ -222,7 +260,8 @@
     "stability-flags": {
         "slim/slim": 20,
         "catfan/medoo": 20,
-        "twig/twig": 20
+        "twig/twig": 20,
+        "vrana/adminer": 20
     },
     "prefer-stable": false,
     "platform": [],

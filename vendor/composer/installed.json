@@ -215,5 +215,45 @@
         "keywords": [
             "templating"
         ]
+    },
+    {
+        "name": "vrana/adminer",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/vrana/adminer.git",
+            "reference": "406889d7c3ac472bfd7696b85c67c087b0cfde13"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/vrana/adminer/zipball/406889d7c3ac472bfd7696b85c67c087b0cfde13",
+            "reference": "406889d7c3ac472bfd7696b85c67c087b0cfde13",
+            "shasum": ""
+        },
+        "time": "2014-12-02 17:17:48",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "plugins/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0",
+            "GPL-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Jakub Vrána",
+                "homepage": "http://www.vrana.cz/"
+            }
+        ],
+        "description": "Database management in a single PHP file.",
+        "homepage": "http://www.adminer.org/",
+        "keywords": [
+            "database"
+        ]
     }
 ]
