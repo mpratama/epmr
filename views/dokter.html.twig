@@ -1,1 +1,23 @@
-{{ data|json_encode() }}
+{% extends "layout.html.twig" %}
+{% block title %}Daftar Dokter{% endblock %}
+{% block stylesheet1 %}css/bijou.min.css{% endblock %}
+{% block stylesheet2 %}css/font-awesome.min.css{% endblock %}
+{% block content %}
+{% spaceless %}
+    <div class='container'>
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th>Nama Dokter</th>
+            <th>Tempat Praktik</th>
+            <th>Nomor Telepon</th>
+          </tr>
+        </thead>
+        {% for dokter in data %}<tbody>
+          <td><a href="dokter/{{ dokter.iddokter|e }}">{{ dokter.nama|e }}</a></td>
+          <td>{{ dokter.lokasi|e }}</td>
+          <td>{{ dokter.telepon|e }}</td>
+        </tbody>{% endfor %}
+      </table>
+      {% endspaceless %}
+{% endblock %}
