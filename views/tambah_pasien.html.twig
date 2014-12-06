@@ -1,0 +1,22 @@
+{% extends "layout.html.twig" %}
+{% block title %}Tambah Pasien Baru{% endblock %}
+{% block stylesheet1 %}../../css/bijou.min.css{% endblock %}
+{% block stylesheet2 %}../../css/font-awesome.min.css{% endblock %}
+{% block indexlink %}/epmr/web{% endblock %}
+{% block content %}
+{% spaceless %}
+<div class='row'>
+<div class='span four'></div>
+<div class='span three'>
+<form action="entry" method="post">
+		<label for="name"><b>Nama Pasien :</b></label><br>
+		<input type="text" size="45" name="nama"/><br>
+		<label for="alamat"><b>Alamat :</b></label><br>
+		<input type="text" size="45" name="alamat"/><br>
+		<label for="telepon"><b>No. Telepon :</b></label><br>
+		<input type="text" size="45" name="telepon"/><br><br>
+		<input type="submit" class="button primary small" value="Tambah Pasien" />
+</div>
+<div class='span four'></div>
+{% endspaceless %}
+{% endblock %}

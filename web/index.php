@@ -16,6 +16,20 @@ $app->get('/pasien/:idpasien', function ($idpasien) use ($app) {
     include '/../controller/select.php';
 })->name('pasien');
 
+$app->get('/pasien/baru/', function () use ($app) {
+	$app->render('tambah_pasien.html.twig');
+})->name('pasienbaru');
+
+$app->post('/pasien/baru/entry/', function () use ($app) {
+	$database = new medoo();
+	$tambah_pasien = $database->insert("pasien",[
+		'nama' => $_POST["nama"],
+		'alamat' => $_POST["alamat"],
+		'telepon' => $_POST["telepon"]
+		]);
+	$app->response->redirect($app->urlFor('index'));
+});
+
 $app->post('/pasien/:idpasien/edit', function ($idpasien) use ($app) {
     include '/../controller/update.php';
 });

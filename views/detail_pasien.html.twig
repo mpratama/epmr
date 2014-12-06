@@ -1,7 +1,7 @@
 {% extends "layout.html.twig" %}
 {% block title %}Detail Pasien{% endblock %}
-{% block stylesheet1 %}/epmr/web/css/bijou.min.css{% endblock %}
-{% block stylesheet2 %}/epmr/web/css/font-awesome.min.css{% endblock %}
+{% block stylesheet1 %}../css/bijou.min.css{% endblock %}
+{% block stylesheet2 %}../css/font-awesome.min.css{% endblock %}
 {% block indexlink %}/epmr/web{% endblock %}
 {% block pullright %}
 <li><i class="fa fa-plus-circle"></i> <a href="#">Tambah Kunjungan</a></li>
@@ -36,7 +36,7 @@
 		<textarea rows="4" cols="50" name="penyakit_lain">{{ pasien.penyakit_lain|e }}</textarea>
 		{% endfor %}
 		</fieldset>
-		<br><input type="submit" class="button primary small grid" value="Ubah Data " />
+		<br><input type="submit" class="button primary small" value="Ubah Data " />
           </form></div>
 		<div class='span four dark'>
 		<fieldset>
