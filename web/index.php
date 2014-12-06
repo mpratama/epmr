@@ -27,7 +27,8 @@ $app->post('/pasien/baru/entry/', function () use ($app) {
 		'alamat' => $_POST["alamat"],
 		'telepon' => $_POST["telepon"]
 		]);
-	$app->response->redirect($app->urlFor('index'));
+	$max = $database->max("pasien", "idpasien");
+	$app->response->redirect($app->urlFor('pasien', array( 'idpasien' => $max )));
 });
 
 $app->post('/pasien/:idpasien/edit', function ($idpasien) use ($app) {
