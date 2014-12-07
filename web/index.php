@@ -16,6 +16,10 @@ $app->get('/pasien/:idpasien', function ($idpasien) use ($app) {
     include '/../controller/select.php';
 })->name('pasien');
 
+$app->get('/pasien/:s/kunjungan/:id/', function ($s, $id) use ($app) {
+    include '/../controller/riwayat_kunjungan.php';
+})->name('kunjungan');
+
 $app->get('/pasien/baru/', function () use ($app) {
 	$app->render('tambah_pasien.html.twig');
 })->name('pasienbaru');

@@ -15,6 +15,7 @@ $detail_pasien = $database->select("pasien", [
 
 $lihat_kunjungan = $database->select("kunjungan", [
 	"id",
+	"idpas",
 	"tanggal"],[
 	"idpas" => $idpasien,
 	"ORDER" => "id ASC"

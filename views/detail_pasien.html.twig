@@ -42,7 +42,7 @@
 		<fieldset>
 		<legend><b>Tanggal Kunjungan :</b></legend>
 			{% for kunjungan in data3 %}
-			<li><a href='#'>{{ kunjungan.tanggal|e }}</a></li>
+			<li><a href='{{ kunjungan.idpas|e }}/kunjungan/{{ kunjungan.id|e }}' target='_blank'>{{ kunjungan.tanggal|e }}</a></li>
 			{% endfor %}
 			</fieldset>
         </div>

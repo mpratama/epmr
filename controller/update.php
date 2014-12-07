@@ -10,5 +10,4 @@ $update_pasien = $database->update("pasien", [
 	"penyakit_lain" => $_POST['penyakit_lain']],[
 	"idpasien" => $_POST['idpasien']
 	]);
-
 $app->response->redirect($app->urlFor('pasien', array('idpasien' => $idpasien)));
