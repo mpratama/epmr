@@ -51,22 +51,41 @@
   	<div class='container'>
       <div class='row'>
         <div class='span twelve dark'>
-          Detail Kunjungan
         </div>
       </div>
       <div class='row'>
-        <div class='span two'>
+        <div class='span two light'>
         {% for j in data2 %}
-        {{ j.nama|e }}
+        <b>Nama:</b><br>
+        {{ j.nama|e }}<br>
         {% endfor %}
-      </div>
-      <div class='span eight'>
+        <b>Tanggal Kunjungan:</b><br>
         {% for m in data %}
+        {{ m.tanggal|e }}<br>
+        <b>Dokter:</b><br>
         {{ m.dokter|e }}<br>
-        {{ m.obat|raw }}
-        {% endfor %}
+        <b>Tipe Kunjungan:</b><br>
+        {{ m.tipe|e }}
+      </div>
+      <div class='span four light'>
+        <b>Resep:</b><br>
+        {{ m.obat|raw }}<hr>
+        <b>Keterangan Resep:</b><br>
+        {{ m.keterangan_resep|e }}
+      </div>
+        <div class="span five light">
+          <b>Info Dokter:</b><br>
+          {{ m.info_dokter|e }}<hr>
+          <b>Khasiat Obat:</b><br>
+          {{ m.khasiat_obat|e }}<hr>
+          <b>Penyimpanan Obat:</b><br>
+          {{ m.penyimpanan_obat|e }}<hr>
+          <b><i>Drug Related Problem</i>:</b><br>
+          {{ m.interaksi_obat|e }}<hr>
+        </div>
       </div>
     </div>
 </div>
+{% endfor %}
   </body>
   </html>
