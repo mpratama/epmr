@@ -1,8 +1,72 @@
-<html>
-<body>
-{% for k in data %}
-{{ k.dokter|e }}<br>
-{{ k.obat|raw }}
-{% endfor %}
-</body>
-</html>
+<!DOCTYPE html>
+<html lang='en'>
+{% for k in data2 %}
+  <head>
+    <title>{{ k.nama|e }}{% endfor %} - Kunjungan</title>
+    <link rel="stylesheet" href="../../../css/bijou.min.css">
+    <link rel="stylesheet" href="../../../css/font-awesome.min.css">
+    <style type='text/css'>
+      body{
+        margin-top:60px;
+      }
+      .light{
+        background:#CCC;'
+        color:#333;
+      }
+      .dark{
+        background:#333;
+        color:#CCC;
+      }
+      .grid{
+        text-align:center;
+        font-size:10px;
+      }
+      .banner{
+        text-align:center;
+        padding:10px 0;
+      }
+      .table{
+        margin-bottom:35px;
+      }
+      .banner button{
+        margin-top:7px;
+      }
+      .divider{
+        width:100%;
+        background:#CCC;
+        height:1px;
+        margin:25px 0;
+      }
+      .explainer{
+        font-weight:200;
+        color:#AAA;
+        margin-bottom:10px;
+      }
+      button{
+      	margin-bottom:10px;
+      }
+    </style>
+  </head>
+  <body>
+  	<div class='container'>
+      <div class='row'>
+        <div class='span twelve dark'>
+          Detail Kunjungan
+        </div>
+      </div>
+      <div class='row'>
+        <div class='span two'>
+        {% for j in data2 %}
+        {{ j.nama|e }}
+        {% endfor %}
+      </div>
+      <div class='span eight'>
+        {% for m in data %}
+        {{ m.dokter|e }}<br>
+        {{ m.obat|raw }}
+        {% endfor %}
+      </div>
+    </div>
+</div>
+  </body>
+  </html>

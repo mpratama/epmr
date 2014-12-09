@@ -16,6 +16,12 @@ $lihat_kunjungan = $database->select("kunjungan", [
 	"id" => $id,
 	]);
 
+$lihat_pasien = $database->select("pasien", [
+	"nama"], [
+	"idpasien" => $s
+	]);
+
 $app->render('detail_kunjungan.html.twig', array(
 	'data' => $lihat_kunjungan,
+	'data2' => $lihat_pasien,
 	));

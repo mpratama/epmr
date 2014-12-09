@@ -1,5 +1,9 @@
 {% extends "layout.html.twig" %}
-{% block title %}Detail Pasien{% endblock %}
+{% block title %}
+{% for p in data2 %}
+{{ p.nama|e }}
+{% endfor %}
+{% endblock %}
 {% block stylesheet1 %}../css/bijou.min.css{% endblock %}
 {% block stylesheet2 %}../css/font-awesome.min.css{% endblock %}
 {% block indexlink %}/epmr/web{% endblock %}
