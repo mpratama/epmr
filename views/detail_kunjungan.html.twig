@@ -50,8 +50,12 @@
   <body>
   	<div class='container'>
       <div class='row'>
-        <div class='span twelve dark'>
-        </div>
+        <div class='span two dark'>
+        <i class="fa fa-wheelchair"></i> - Data Pasien</div>
+        <div class='span four dark'>
+        <i class="fa fa-medkit"></i> - Obat</div>
+        <div class='span five dark'>
+        <i class="fa fa-files-o"></i> - Informasi Lain</div>
       </div>
       <div class='row'>
         <div class='span two light'>
@@ -82,6 +86,10 @@
           {{ m.penyimpanan_obat|e }}<hr>
           <b><i>Drug Related Problem</i>:</b><br>
           {{ m.interaksi_obat|e }}<hr>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='span twelve dark'>
         </div>
       </div>
     </div>

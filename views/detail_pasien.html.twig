@@ -8,7 +8,7 @@
 {% block stylesheet2 %}../css/font-awesome.min.css{% endblock %}
 {% block indexlink %}/epmr/web{% endblock %}
 {% block pullright %}
-<li><i class="fa fa-plus-circle"></i> <a href="#">Tambah Kunjungan</a></li>
+<li><i class="fa fa-plus-circle"></i> <a href="{% for f in data2 %}{{ f.idpasien }}{% endfor %}/tambah">Tambah Kunjungan</a></li>
 {% endblock %}
 {% block content %}
 {% spaceless %}
