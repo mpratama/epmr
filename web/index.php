@@ -17,7 +17,7 @@ $app->get('/pasien/:idpasien', function ($idpasien) use ($app) {
 })->name('pasien');
 
 $app->get('/pasien/:idpasien/tambah', function ($idpasien) use ($app) {
-    echo 'Nunggu diedit controller nya. Id pasien => '.$idpasien;
+    $app->render('form_kunjungan.html.twig', array( 'idpas' => $idpasien));
 });
 
 $app->get('/pasien/:s/kunjungan/:id/', function ($s, $id) use ($app) {

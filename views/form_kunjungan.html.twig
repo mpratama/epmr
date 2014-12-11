@@ -1,0 +1,28 @@
+{% extends "layout.html.twig" %}
+{% block title %}Kunjungan Baru{% endblock %}
+{% block stylesheet1 %}../../css/bijou.min.css{% endblock %}
+{% block stylesheet2 %}../../css/font-awesome.min.css{% endblock %}
+{% block stylesheet3 %}<link rel="stylesheet" type="text/css" href="../../css/jquery.datetimepicker.css"/>{% endblock %}
+{% block indexlink %}../../index.php{% endblock %}
+{% block content %}
+
+<div class='container'>
+{{ idpas }}
+
+<form action="submit_new_kunjungan.php" method="post">
+<label for="name">Tanggal Kunjungan</label>
+<input type="text" id="datetimepicker2" name="tanggal" />
+</form>
+
+</div>
+<script src="../../js/vendor/jquery.js"></script>
+<script src="../../js/jquery.datetimepicker.js"></script>
+<script type="text/javascript">
+$('#datetimepicker2').datetimepicker({
+	lang:'id',
+	timepicker:false,
+	format:'d M Y',
+	formatDate:'Y/m/d',
+});
+</script>
+{% endblock %}
