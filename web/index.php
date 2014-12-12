@@ -17,7 +17,14 @@ $app->get('/pasien/:idpasien', function ($idpasien) use ($app) {
 })->name('pasien');
 
 $app->get('/pasien/:idpasien/tambah', function ($idpasien) use ($app) {
-    $app->render('form_kunjungan.html.twig', array( 'idpas' => $idpasien));
+	$database = new medoo();
+	$list_dokter = $database->select('dokter',[
+		'nama'
+		],[
+		'ORDER' => 'nama ASC'
+		]);
+	$dokter = $list_dokter;
+    $app->render('form_kunjungan.html.twig', array( 'idpas' => $idpasien, 'dok' => $dokter));
 });
 
 $app->get('/pasien/:s/kunjungan/:id/', function ($s, $id) use ($app) {

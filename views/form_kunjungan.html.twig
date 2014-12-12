@@ -8,12 +8,41 @@
 {% block content %}
 
 <div class='container'>
-{{ idpas }}
+<h3>Form Kunjungan</h3>
+<div class='divider'></div>
 
 <form action="submit_new_kunjungan.php" method="post">
-<label for="name">Tanggal Kunjungan</label>
-<input type="text" id="datetimepicker2" name="tanggal" />
-<textarea style="height: 200px;" cols="100%" id="area4" name="obat" />R/</textarea>
+<input type="hidden" name="idpas" value="{{ idpas }}" />
+<div class='row'>
+<div class='span two'>
+<fieldset>
+<legend>Data Kunjungan</legend>
+<label for="tanggal"><small><b>Tanggal Kunjungan</b></small></label><br>
+<input type="text" id="datetimepicker2" name="tanggal" /><br>
+<label for="tipe"><small><b>Tipe Kunjungan</b></small></label><br>
+<select name="tipe">
+	<option name="tipe">Resep</option>
+	<option name="tipe">UPDS</option>
+</select><br>
+<label for="dokter"><small><b>Dokter</b></small></label><br>
+<select name="dokter">
+	{% for dokt in dok %}
+	<option name="dokter">{{ dokt.nama }}</option>
+	{% endfor %}
+</select>
+</fieldset>
+</div>
+
+<div class='span four'>
+<fieldset>
+<legend>Obat</legend>
+<label for="obat"><small><b>Resep</b></small></label><br>
+<textarea style="height: 100px;" cols="53%" id="area4" name="obat" />R/</textarea>
+<label for="keterangan_resep"><small><b>Keterangan Resep</b></small></label><br>
+<input type="text" name="keterangan_resep" value="diambil semua"/>
+</fieldset>
+</div>
+</div>
 </form>
 
 </div>
@@ -21,9 +50,7 @@
 <script src="../../js/jquery.datetimepicker.js"></script>
 <script type="text/javascript">
 bkLib.onDomLoaded(function() {
-
 	new nicEditor({iconsPath : '../../js/nicEditorIcons.gif'}, {buttonList : ['fontSize','bold','italic','underline','html','image']}).panelInstance('area4');
-
 });
 
 </script>
