@@ -42,6 +42,10 @@
 <input type="text" name="keterangan_resep" value="diambil semua"/>
 </fieldset>
 </div>
+
+<div class='span five'>
+Menunggu diisi
+</div>
 </div>
 </form>
 
@@ -60,6 +64,7 @@ $('#datetimepicker2').datetimepicker({
 	timepicker:false,
 	format:'d M Y',
 	formatDate:'Y/m/d',
+	closeOnDateSelect:true,
 });
 </script>
 {% endblock %}
