@@ -58,6 +58,22 @@ $app->get('/dokter/', function () use ($app) {
     include '/../controller/dokter.php';
 });
 
+$app->post('/pasien/:idpasien/enter/', function () use ($app) {
+	$database = new medoo();
+	$tambah_kunjungan = $database->insert("kunjungan",[
+		'tanggal' => $_POST["tanggal"],
+		'tipe' => $_POST["tipe"],
+		'dokter' => $_POST["dokter"],
+		'obat' => $_POST["obat"],
+		'idpas' => $_POST["idpas"],
+		'info_dokter' => $_POST["info_dokter"],
+		'khasiat_obat' => $_POST["khasiat_obat"],
+		'keterangan_resep' => $_POST["keterangan_resep"],
+		'penyimpanan_obat' => $_POST["penyimpanan_obat"],
+		'interaksi_obat' => $_POST["interaksi_obat"]
+		]);
+});
+
 $app->run();
 
 ?>

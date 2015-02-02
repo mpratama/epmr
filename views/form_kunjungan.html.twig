@@ -3,6 +3,10 @@
 {% block stylesheet1 %}../../css/bijou.min.css{% endblock %}
 {% block stylesheet2 %}../../css/font-awesome.min.css{% endblock %}
 {% block stylesheet3 %}<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css"/>{% endblock %}
+{% block stylesheet4 %}
+<style type="text/css">
+.ui-widget { font-family: Lucida Grande, Lucida Sans, Arial, sans-serif; font-size: 0.9em; }
+</style>{% endblock %}
 {% block javascript1 %}<script src="../../js/nicEdit.js" type="text/javascript"></script>{% endblock %}
 {% block indexlink %}../../index.php{% endblock %}
 {% block content %}
@@ -11,7 +15,7 @@
 <h3>Form Kunjungan</h3>
 <div class='divider'></div>
 
-<form action="submit_new_kunjungan.php" method="post">
+<form action="enter" method="post">
 <input type="hidden" name="idpas" value="{{ idpas }}" />
 <div class='row'>
 <div class='span two'>
@@ -44,8 +48,19 @@
 </div>
 
 <div class='span five'>
-Menunggu diisi
+<fieldset>
+<legend>Form F1</legend>
+<label for="info_dokter"><small><b>Info Dokter</b></small></label><br>
+<textarea style="height: 100px;" cols="53%" name="info_dokter" />. . .</textarea><br>
+<label for="khasiat_obat"><small><b>Kegunaan Obat</b></small></label><br>
+<textarea style="height: 100px;" cols="53%" name="khasiat_obat" />. . .</textarea><br>
+<label for="penyimpanan_obat"><small><b>Penyimpanan Obat</b></small></label><br>
+<input type="text" name="penyimpanan_obat" value="Suhu kamar"/><br>
+<label for="interaksi_obat"><small><b>Drug Related Problem</b></small></label><br>
+<textarea style="height: 100px;" cols="53%" name="interaksi_obat" />. . .</textarea><br>
+</fieldset>
 </div>
+<input type="submit" class="button primary small" value="Enter" />
 </div>
 </form>
 
