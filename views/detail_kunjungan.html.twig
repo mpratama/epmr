@@ -65,7 +65,7 @@
         {% endfor %}
         <b>Tanggal Kunjungan:</b><br>
         {% for m in data %}
-        {{ m.tanggal|e }}<br>
+        {{ m.tanggal|date("d M Y") }}<br>
         <b>Dokter:</b><br>
         {{ m.dokter|e }}<br>
         <b>Tipe Kunjungan:</b><br>
@@ -79,13 +79,13 @@
       </div>
         <div class="span five light">
           <b>Info Dokter:</b><br>
-          {{ m.info_dokter|e }}<hr>
+          {{ m.info_dokter|nl2br }}<hr>
           <b>Khasiat Obat:</b><br>
-          {{ m.khasiat_obat|e }}<hr>
+          {{ m.khasiat_obat|nl2br }}<hr>
           <b>Penyimpanan Obat:</b><br>
           {{ m.penyimpanan_obat|e }}<hr>
           <b><i>Drug Related Problem</i>:</b><br>
-          {{ m.interaksi_obat|e }}<hr>
+          {{ m.interaksi_obat|nl2br }}<hr>
         </div>
       </div>
       <div class='row'>

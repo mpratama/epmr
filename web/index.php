@@ -58,7 +58,7 @@ $app->get('/dokter/', function () use ($app) {
     include '/../controller/dokter.php';
 });
 
-$app->post('/pasien/:idpasien/enter/', function () use ($app) {
+$app->post('/pasien/:idpasien/enter/', function ($idpasien) use ($app) {
 	$database = new medoo();
 	$tambah_kunjungan = $database->insert("kunjungan",[
 		'tanggal' => $_POST["tanggal"],
@@ -72,6 +72,7 @@ $app->post('/pasien/:idpasien/enter/', function () use ($app) {
 		'penyimpanan_obat' => $_POST["penyimpanan_obat"],
 		'interaksi_obat' => $_POST["interaksi_obat"]
 		]);
+	$app->response->redirect($app->urlFor('pasien', array('idpasien' => $idpasien)));
 });
 
 $app->run();
